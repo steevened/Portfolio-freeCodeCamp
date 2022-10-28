@@ -186,19 +186,17 @@ img {
   border-radius: 5px;
 }
 
-#projects .grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   margin: auto;
-  /* border: 2px solid red; */
   margin-top: 5rem;
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  /* border: 2px solid white; */
   padding: 0 1rem;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
   backdrop-filter: blur(100px);
@@ -214,13 +212,11 @@ img {
 }
 
 .links-projects {
-  /* border: 2px solid sienna; */
   padding: 2rem 0;
   display: flex;
   justify-content: space-evenly;
 }
 .project .btn {
-  /* border: 2px solid red; */
   padding: 1rem 2rem;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
   border-radius: 5px;
@@ -596,5 +592,40 @@ img {
 
   100% {
     transform: translate(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay h1 {
+    font-size: 3.8rem;
+  }
+  .overlay h3 {
+    font-size: 2.5 rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-title h2 {
+    font-size: 3.5rem;
+  }
+  #contact {
+    overflow: hidden;
+  }
+
+  #contact h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 481px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 729px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
